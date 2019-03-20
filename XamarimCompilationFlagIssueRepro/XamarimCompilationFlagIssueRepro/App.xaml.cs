@@ -12,6 +12,13 @@ namespace XamarimCompilationFlagIssueRepro
             InitializeComponent();
 
             MainPage = new MainPage();
+
+#if SERVER_PROD
+            ThisIsGood();
+#elif SERVER_DEBUG
+            ThisIsAlsoGood();
+#else
+            Idontwantthis();
         }
 
         protected override void OnStart()
