@@ -15,10 +15,11 @@ namespace XamarimCompilationFlagIssueRepro
 
 #if SERVER_PROD
             ThisIsGood();
-#elif SERVER_DEBUG
+#elif SERVER_DEV
             ThisIsAlsoGood();
 #else
             Idontwantthis();
+#endif
         }
 
         protected override void OnStart()
